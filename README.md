@@ -2,16 +2,18 @@
 
 Yazawa will give you about consultation.
 
-### Installation
+## Installation
 
 ```shell
 $ npm i -g yazawa
 ```
 
-### Usage
+## Usage
 ```shell
 $ yazawa
 ```
+
+Thank you for consulting. Good luck! 
 
 
 
