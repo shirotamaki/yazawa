@@ -10,14 +10,14 @@ class Display {
   }
 
   firstMessage () {
-      console.log('\n' +
+    console.log('\n' +
         ' __   __     _      _____     _     __        __     _ \n' +
         ' \\ \\ / /    / \\    |__  /    / \\    \\ \\      / /    / \\ \n' +
         '  \\ V /    / _ \\     / /    / _ \\    \\ \\ /\\ / /    / _ \\ \n' +
         '   | |    / ___ \\   / /_   / ___ \\    \\ V  V /    / ___ \\ \n' +
         '   |_|   /_/   \\_\\ /____| /_/   \\_\\    \\_/\\_/    /_/   \\_\\ \n'
-      )
-      console.log('キミの悩みにYAZAWAがロックなアドバイスをするぜ!')
+    )
+    console.log('キミの悩みにYAZAWAがロックなアドバイスをするぜ!')
   }
 
   userNameInput () {
@@ -73,21 +73,21 @@ class Display {
 
   lastMessage (count) {
     setTimeout(() => {
-    console.log('-----------------------------------------------------------------')
-    console.log(
-      '  ____    ___     ___    ____      _       _   _    ____   _  __ \n' +
+      console.log('-----------------------------------------------------------------')
+      console.log(
+        '  ____    ___     ___    ____      _       _   _    ____   _  __ \n' +
       ' / ___|  / _ \\   / _ \\  |  _ \\    | |     | | | |  / ___| | |/ / \n' +
       '| |  _  | | | | | | | | | | | |   | |     | | | | | |     | \' / \n' +
       '| |_| | | |_| | | |_| | | |_| |   | |___  | |_| | | |___  | . \\ \n' +
       ' \\____|  \\___/   \\___/  |____/    |_____|  \\___/   \\____| |_|\\_\\'
-    )
+      )
     }, count)
   }
 
   typewriter (text) {
     return new Promise((resolve) => {
-      let speed = this.time
-      let displayText = text.split("")
+      const speed = this.time
+      const displayText = text.split('')
       return displayText.forEach((char, index) => {
         setTimeout(() => {
           process.stdout.write(char)
@@ -99,12 +99,12 @@ class Display {
 }
 
 class Main {
-  constructor(time) {
+  constructor (time) {
     this.display = new Display(time)
     this.time = time
   }
 
-  async run() {
+  async run () {
     await this.display.firstMessage()
     const name = await this.display.userNameInput()
     await this.display.thankMessage(name)
