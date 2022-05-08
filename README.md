@@ -13,7 +13,3 @@ $ npm i -g yazawa
 $ yazawa
 ```
 
-Thank you for consulting. Good luck! 
-
-
-
