@@ -3,6 +3,9 @@
   "version": "1.0.2",
   "description": "Yazawa will give you about consultation.",
   "main": "index.js",
+  "bin": {
+    "yazawa": "./index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,9 +13,6 @@
   "license": "ISC",
   "dependencies": {
     "enquirer": "^2.3.6"
-  },
-  "bin": {
-    "yazawa": "index.js"
   },
   "devDependencies": {},
   "repository": {
