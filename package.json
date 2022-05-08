@@ -1,22 +1,17 @@
 {
   "name": "yazawa",
   "version": "1.0.0",
-  "description": "",
-  "main": "yazawa.js",
+  "description": "Yazawa will give you about consultation.",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "shirotamaki",
   "license": "ISC",
   "dependencies": {
-    "enquirer": "^2.3.6",
-    "keypress": "^0.2.1"
+    "enquirer": "^2.3.6"
   },
-  "devDependencies": {
-    "eslint": "^8.14.0",
-    "eslint-config-standard": "^17.0.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-n": "^15.2.0",
-    "eslint-plugin-promise": "^6.0.0"
+  "bin": {
+    "yazawa": "index.js"
   }
 }

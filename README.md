@@ -1,7 +1,6 @@
 # YAZAWA
 
-
-Yazawa will give you advice on your worry.
+Yazawa will give you about consultation.
 
 ### Installation
 
@@ -11,6 +10,8 @@ $ npm i -g yazawa
 
 ### Usage
 ```shell
-
+$ yazawa
 ```
+
+
 
