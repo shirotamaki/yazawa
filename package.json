@@ -13,5 +13,14 @@
   },
   "bin": {
     "yazawa": "index.js"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shirotamaki/yazawa.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shirotamaki/yazawa/issues"
+  },
+  "homepage": "https://github.com/shirotamaki/yazawa#readme"
 }
