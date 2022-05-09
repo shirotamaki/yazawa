@@ -21,7 +21,7 @@ class Display {
   }
 
   userNameInput () {
-    const question = 'まずはキミの名前を教えてくれ！\nニックネームを入力してエンターでカモン！！\n'
+    const question = 'まずはキミの名前を教えてくれ！\nニックネームを入力してエンターでカモン!!\n'
     const inputData = readline.createInterface({
       input: process.stdin,
       output: process.stdout
