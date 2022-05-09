@@ -1,6 +1,6 @@
 # YAZAWA
 
-Yazawa will give you about consultation.
+Yazawa will give you some advice.
 
 ## Installation
 
