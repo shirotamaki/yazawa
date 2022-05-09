@@ -43,7 +43,7 @@ class Display {
     const prompt = new Select({
       name: 'advisement',
       message: 'YAZAWAに相談したい内容をセレクトしてくれ！',
-      choices: ['仕事', 'お金', '恋愛', '人生', '夢', '挑戦', '挫折', '幸せ', '老い', 'とくにない']
+      choices: ['仕事', 'お金', '恋愛', '人生', '夢', '挑戦', '挫折', '幸せ', '老い', 'とくになし']
     })
 
     return await prompt.run().then(selectedWorry => {
@@ -62,7 +62,7 @@ class Display {
       挫折: '最初、サンザンな目にあう。二度目、オトシマエをつける。三度目、余裕！\n',
       幸せ: `アー・ユー・ハッピー？ ${name}はすでにハッピーなはずだぜ！\n`,
       老い: '年をとるってのは細胞が老けることであって、魂が老けることじゃない\n',
-      とくにない: 'ボクは別にいいんだけど...  YAZAWAがなんて言うかな？\n'
+      とくになし: 'ボクは別にいいんだけど...  YAZAWAがなんて言うかな？\n'
     }
     return obj[advice]
   }
@@ -85,15 +85,12 @@ class Display {
   }
 
   typewriter (text) {
-    return new Promise((resolve) => {
-      const speed = this.time
-      const displayText = text.split('')
-      return displayText.forEach((char, index) => {
-        setTimeout(() => {
-          process.stdout.write(char)
-          resolve()
-        }, speed * index)
-      })
+    const speed = this.time
+    const displayText = text.split('')
+    displayText.forEach((char, index) => {
+      setTimeout(() => {
+        process.stdout.write(char)
+      }, speed * index)
     })
   }
 }
