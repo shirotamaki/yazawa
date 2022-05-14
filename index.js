@@ -4,7 +4,7 @@
 const { Select } = require('enquirer')
 const readline = require('readline')
 
-class Display {
+class Yazawa {
   constructor (time) {
     this.time = time
   }
@@ -97,20 +97,20 @@ class Display {
 
 class Main {
   constructor (time) {
-    this.display = new Display(time)
+    this.yazawa = new Yazawa(time)
     this.time = time
   }
 
   async run () {
-    await this.display.firstMessage()
-    const name = await this.display.userNameInput()
-    await this.display.thankMessage(name)
-    const selectedWorry = await this.display.selectWorry()
-    const selectedAdvice = await this.display.selectAdvise(name, selectedWorry)
-    await this.display.displayLine()
-    await this.display.typewriter(selectedAdvice)
+    await this.yazawa.firstMessage()
+    const name = await this.yazawa.userNameInput()
+    await this.yazawa.thankMessage(name)
+    const selectedWorry = await this.yazawa.selectWorry()
+    const selectedAdvice = await this.yazawa.selectAdvise(name, selectedWorry)
+    await this.yazawa.displayLine()
+    await this.yazawa.typewriter(selectedAdvice)
     const count = this.time * selectedAdvice.length
-    await this.display.lastMessage(count)
+    await this.yazawa.lastMessage(count)
   }
 }
 
