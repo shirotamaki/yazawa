@@ -20,7 +20,7 @@ class Yazawa {
     console.log('キミの悩みにYAZAWAがロックなアドバイスをお届け!')
   }
 
-  userNameInput () {
+  sayName () {
     const question = 'まずはキミの名前を教えてくれ！\nニックネームを入力してエンターでカモン!!\n'
     const inputData = readline.createInterface({
       input: process.stdin,
@@ -35,7 +35,7 @@ class Yazawa {
     })
   }
 
-  thankMessage (name) {
+  thanks (name) {
     console.log(`\nサンキュー ${name} !! \n`)
   }
 
@@ -51,7 +51,7 @@ class Yazawa {
     }).catch(console.error)
   }
 
-  selectAdvise (name, advice) {
+  askForAdvice (name, advice) {
     const obj = {
       仕事: 'やり続けることしかないということだけですよ。自分の仕事にオレ才能あるんだと...\n',
       お金: `${name}の一生かかって稼ぐ金、YAZAWAの2秒。そこんとこ、ヨロシク！\n`,
@@ -71,7 +71,7 @@ class Yazawa {
     console.log('-----------------------------------------------------------------')
   }
 
-  lastMessage (count) {
+  goodLuck (count) {
     setTimeout(() => {
       console.log('-----------------------------------------------------------------')
       console.log(
@@ -102,15 +102,15 @@ class Main {
   }
 
   async run () {
-    await this.yazawa.firstMessage()
-    const name = await this.yazawa.userNameInput()
-    await this.yazawa.thankMessage(name)
+    this.yazawa.firstMessage()
+    const name = await this.yazawa.sayName()
+    this.yazawa.thanks(name)
     const selectedWorry = await this.yazawa.selectWorry()
-    const selectedAdvice = await this.yazawa.selectAdvise(name, selectedWorry)
-    await this.yazawa.displayLine()
-    await this.yazawa.typewriter(selectedAdvice)
+    const selectedAdvice = this.yazawa.askForAdvice(name, selectedWorry)
+    this.yazawa.displayLine()
+    this.yazawa.typewriter(selectedAdvice)
     const count = this.time * selectedAdvice.length
-    await this.yazawa.lastMessage(count)
+    this.yazawa.goodLuck(count)
   }
 }
 
