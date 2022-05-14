@@ -1,6 +1,6 @@
 {
   "name": "yazawa",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Yazawa will give you about consultation.",
   "main": "index.js",
   "bin": {
